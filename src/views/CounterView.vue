@@ -4,7 +4,6 @@
     <button v-on:click="change(1, $event)">-1</button>
     <button 
     :class="{active:isShow, disabled: !isShow}"
-    
     @click="isShow = !isShow">{{ isShow? 'Скрыть':'Показать' }}</button>
     <p v-if="isShow">Вы нажали на кпонку {{ count }} раз</p>
   </div>
@@ -19,12 +18,10 @@ export default {
     },
     methods: {
         change(number, event) {
-            // console.log(event.target)
             this.count = this.count + -number;
         },
 
         say(event) {
-            // console.log(event)
             alert(event.target[0].value)
         }
     },
